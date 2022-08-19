@@ -32,7 +32,7 @@ const EditMenu = () => {
     console.log("Printing id", itemId);
     ItemService.removeItem(itemId)
       .then((response) => {
-        console.log("item deleted successfully", response.data);
+        console.log("course deleted successfully", response.data);
         init();
       })
       .catch((error) => {
@@ -43,7 +43,7 @@ const EditMenu = () => {
   return (
     <div>
       <div className="container">
-        <h3 style={{ color: "black" }}>List of Foods</h3>
+        <h3 style={{ color: "black" }}>Food Menu</h3>
         <hr />
         <div>
           <Link
@@ -56,7 +56,6 @@ const EditMenu = () => {
           <table className="table table-bordered table-striped">
             <thead className="thead-dark">
               <tr>
-                <th> Id</th>
                 <th> Food Name</th>
                 <th> price</th>
                 <th> Action</th>
@@ -65,7 +64,6 @@ const EditMenu = () => {
             <tbody id="table-text">
               {food.map((food) => (
                 <tr key={food.itemId}>
-                  <td>{food.itemId}</td>
                   <td>{food.itemName}</td>
                   <td>{food.cost}</td>
                   <td>
