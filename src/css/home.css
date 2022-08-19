@@ -1,0 +1,23 @@
+#nav-btn{
+    margin-right : 15px;
+
+}  
+
+#card-container {
+    background: white;
+}
+
+.card.product .btn {
+    bottom: 1.5rem;
+    max-width: 80%;
+}
+
+.price {
+    font-size: 1.75rem;
+}
+
+@media (max-width: 508px) {
+    .card-container {
+        margin-bottom: 2rem;
+    }
+}
